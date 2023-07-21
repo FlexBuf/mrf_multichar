@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 .container {
     display: none;
 }
@@ -14,53 +14,58 @@
     width: 100vw;
     left: 0;
     z-index: 100;
+
 }
 
 .characters-block-header>p {
     text-align: center;
     color: #ededed;
-    line-height: 2.4vh;
+    line-height: 24px;
     font-family: 'Rubik', sans-serif;
 }
 
 .characters-list {
     display: none;
-    width: 22vw;
-    height: 70vh;
-    margin-left: -13vw;
-    top: 90vh;
+    width: 22%;
+    height: 70%;
+    margin-left: -13%;
+    top: 90%;
     border-radius: .8vh;
-    padding: 29vh;
+    padding: 290px;
 }
 
 .character-list-header {
     position: relative;
     top: 2.5vh;
     width: 100%;
-    height: 10vh;
+    height: 10%;
     margin-left: -2vh;
+
 }
 
-.character-list-header>p, .character-list-header>p2 {
+.character-list-header>p {
     text-align: center;
     font-size: 2vh;
     margin-top: .1vh;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .1vh;
     font-weight: 400;
-}
-
-.character-list-header>p {
     color: #ededed;
 }
 
 .character-list-header>p2 {
+    text-align: center;
+    font-size: 2vh;
+    margin-top: .1vh;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .1vh;
+    font-weight: 400;
     color: #ff0000;
 }
 
 .characters {
     width: 100%;
-    height: 75vh;
+    height: 75%;
     overflow: scroll !important;
 }
 
@@ -80,7 +85,7 @@
 }
 
 .character:hover {
-
+   /* background-color: #00000059; */
 }
 
 .character>span {
@@ -96,32 +101,34 @@
     position: relative;
     float: right;
     font-size: 1.5vh;
-    right: 3.5vh;
-    line-height: 8vh;
+    right: 35px;
+    line-height: 80px;
 }
 
 .char-selected {
+    /* background-color: rgb(0 0 0 / 29%) !important; */
     transition: 250ms;
 }
 
 .disabled {
-
+    /* background-color: rgba(0, 0, 0, 0.691); */
 }
 
 .logo {
-    position: absolute;
-    width: 38vw;
-    height: 22.8vh;
-    left: 149.6vh;
-    top: 6.5vh;
+position: absolute;
+width: 380px;
+height: 228px;
+left: 1496px;
+top: 65px;
+/* background: url(""); */
 }
 
 #slot-name {
     position: relative;
     color: #ededed;
-    font-size: 1.7vh;
-    line-height: 8vh;
-    left: 2vh;
+    font-size: 17px;
+    line-height: 80px;
+    left: 20px;
     font-weight:500;
     font-family: 'Rubik', sans-serif;
 }
@@ -134,7 +141,7 @@
     transition: 0.2s;
     float: left;
     margin-top: 15px;
-    margin-right: 5vh;
+    margin-right: 50px;
     cursor: pointer;
     overflow: visible !important;
 }
@@ -152,12 +159,12 @@
 
 .shadow {
     position: absolute;
-    width: 24.5vw;
-    height: 94vh;
-    left: -11.7vh;
-    top: 1.6vh;
+    width: 245px;
+    height: 940px;
+    left: -117px;
+    top: 16px;
     background: #0edda9;
-    filter: blur(31vh);
+    filter: blur(310px);
 }
 
 #play {
@@ -171,8 +178,14 @@
     margin-left:2vh;
     height: 14vh;
     width: 39vh;
-    z-index: 999;
+    z-index:1;
+    z-index:2;
+    z-index:999;
     transition: all 0.2s ease;
+}
+
+#play:hover {
+
 }
 
 #delete {
@@ -186,19 +199,26 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1128354701067419689/del.png');
-    z-index: 999;
+    z-index:1;
+    z-index:2;
+    z-index:999;
     transition: all 0.2s ease;
+}
+
+#delete:hover {
+
 }
 
 .character-info {
     display: none;
     position: absolute;
     width: 20%;
-    height: 30vh;
+    height: 30%;
     right: -2%;
-    top: -40vh;
+    top: -40%;
+
     border-radius: .8vh;
-    padding: 3vh;
+    padding: 30px;
     overflow: visible !important;
 }
 
@@ -206,7 +226,7 @@
     position: relative;
     font-size: 1.5vh;
     color: #ededed;
-    right: 2vh;
+    right: 20px;
     overflow: visible !important;
 }
 
@@ -224,8 +244,8 @@
 #no-char {
     position: absolute;
     color: #ededed;
-    font-size: 1.6vh;
-    top: 30vh;
+    font-size: 16px;
+    top: 30%;
     text-align: center;
 }
 
@@ -244,12 +264,12 @@
 
 #info-label {
    color: #4dd3b6;
-   line-height: 6vh;
-   text-shadow: 0px 0px 1.392vh #4dd3b6;
+   line-height: 60px;
+   text-shadow: 0px 0px 13.92px #4dd3b6;
 }
 
 .char-info-js {
-    line-height: 6vh;
+    line-height: 60px;
 }
 
 .character-info-box {
@@ -264,7 +284,7 @@
     background-position: center center;
     background-image: url('https://media.discordapp.net/attachments/1003822642379374703/1131520603040522301/marfyinfo.png');
     text-transform: uppercase;
-    margin-bottom: 1.2vh;
+    margin-bottom: 12px;
 }
 
 .char-info-js {
@@ -273,7 +293,7 @@
 }
 
 #info-label {
-    margin-left: 1vh;
+    margin-left: 10px;
 }
 
 .character-delete {
@@ -288,7 +308,7 @@
     margin-right: auto;
     background-color: #00000075;
     border-radius: .8vh;
-    padding: 3vh;
+    padding: 30px;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(10, 233, 196, 0.788), 0 6px 20px 0 rgba(10, 233, 196, 0.788);
     color: #ededed;
@@ -299,11 +319,11 @@
 .characters-delete-block-header {
     position: absolute;
     width: 100%;
-    height: 11vh;
+    height: 11%;
     color: #ededed;
     text-align: left;
     font-size: 2vh;
-    line-height: 2.9vh;
+    line-height: 29px;
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
@@ -316,7 +336,7 @@
 }
 
 .character-delete>p {
-    padding-top: 5vh;
+    padding-top: 50px;
     font-size: 1.3vh;
     overflow: visible !important;
 }
@@ -327,13 +347,13 @@
     width: 40vh;
     height: auto;
     top: 5vh;
-    left: 3.2vh;
+    left: 32px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(23, 23, 23, 1);
-    border: 2px solid #14dc99;
+    border: 2px solid #dc1414;
     border-radius: .8vh;
-    padding: 3vh;
+    padding: 30px;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #ededed;
@@ -344,31 +364,30 @@
 .error-title{
     position: relative;
     width: 100%;
-    height: 11vh;
-    margin-bottom: 1.6vh;
+    height: 11%;
+    margin-bottom: 16px;
     color: #ededed;
     text-align: left;
-    font-size: 1.8vh;
-    line-height: 2.9vh;
+    font-size: 18px;
+    line-height: 29px;
     vertical-align: middle;
     font-family: 'Rubik', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     overflow: visible !important;
 }
-
 .error-title > .material-symbols-outlined{
-    line-height: 2.7vh;
+    line-height: 27px;
     vertical-align: bottom;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 1.6vh;
+    margin-right: 16px;
 }
 
 .error-msg {
     font-family: 'Rubik', sans-serif;
     overflow: visible !important;
-    padding: .8vh;
+    padding: 8px;
 }
 
 #yeet {
@@ -381,9 +400,9 @@
     height: 19%;
     bottom: 0;
     left: 5%;
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
     background-color: #0dffb6a6;
-    border-radius: .4vh;
+    border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
@@ -395,9 +414,9 @@
     height: 19%;
     bottom: 0;
     right: 5%;
-    margin-bottom: 2vh;
-    background-color: #14dc99;
-    border-radius: .4vh;
+    margin-bottom: 20px;
+    background-color: #dc1414;
+    border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
@@ -408,16 +427,26 @@
     text-transform: uppercase;
     width: auto;
     height: auto;
-    padding: .8vh 2.4vh;
-    margin-top: 2.4vh;
-    background-color: #14dc99;
-    border-radius: .4vh;
+    padding: 8px 24px;
+    margin-top: 24px;
+    background-color: #dc1414;
+    border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
     cursor: pointer;
 }
 
-.character-acceptdel-btn>p, .character-canceldel-btn>p {
+.character-acceptdel-btn>p {
+    color: #ededed;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    overflow: visible !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.character-canceldel-btn>p {
     color: #ededed;
     text-align: center;
     padding-top: 1vh;
@@ -430,14 +459,15 @@
 .character-register {
     display: none;
     position: fixed;
-    width: 20vw;
-    height: 50vh;
-    top: 5vh;
+    width: 20%;
+    height: 50%;
+    top: 5%;
     margin-left: auto;
     left: 75vh;
     background: rgba(5, 26, 21, 0.73);
-    border-radius: 1.6vh;
-    padding: 3vh;
+    border-radius: 16px;
+    border-radius: .8vh;
+    padding: 30px;
     font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -490,8 +520,9 @@
     width: 72%;
     height: 6vh;
     color: #ededed;
+    max-width: 100%;
     font-weight: 900;
-    padding: .4vh;
+    padding: 4px;
     border-radius: .3vh;
     font-family: 'Rubik', sans-serif;
     text-align: center;
@@ -510,7 +541,8 @@ select {
     top: 33.9vh;
     left: .1vh;
     color: #ededed;
-    padding: .4vh;
+    max-width: 100%;
+    padding: 4px;
     border-radius: .3vh;
     font-family: 'Rubik', sans-serif;
     text-align-last: center;
@@ -581,7 +613,7 @@ input[type="date"]::-webkit-clear-button {
     position: absolute;
     max-width: 87%;
     height: 4vh;
-    background-color: #14dc99;
+    background-color: #dc1414;
     border-radius: .3vh;
     bottom: 3vh;
     margin: 0 auto;
@@ -606,51 +638,56 @@ input[type="date"]::-webkit-clear-button {
     left: 0;
     right: 0;
     top: 50%;
-    width: 15vh;
-    height: 15vh;
-}
-
-.loading-rondje img {
-    width: 100%;
-    height: auto;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.character-register-done {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(5, 26, 21, 0.73);
-    border-radius: 1.6vh;
-    padding: 3vh;
-    top: 0;
-    left: 0;
-    font-family: 'Rubik', sans-serif;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-50%);
     text-align: center;
-    color: #ededed;
-    font-weight: 900;
-    font-size: 2.5vh;
+    padding: 1vh;
 }
 
-.character-register-done a {
-    position: relative;
-    top: 55%;
-    color: #14dc99;
-    text-decoration: underline;
-    cursor: pointer;
+.loading-rondje > p {
+    color: white;
+    margin-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 1px 1px 0px #00000085;
 }
 
-.character-register-done h1 {
+.lds-ring {
+    display: inline-block;
     position: relative;
-    top: 40%;
+    width: 80px;
+    height: 80px;
 }
 
-.character-register-done p {
-    position: relative;
-    top: 45%;
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 8px solid #00ffc8;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #00ffc8 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -3,7 +3,6 @@ var WelcomePercentage = "30vh"
 qbMultiCharacters = {}
 var Loaded = false;
 var NChar = null;
-var background = document.getElementById("song");
 var EnableDeleteButton = false;
 var dollar = Intl.NumberFormat('en-US');
 
@@ -57,9 +56,6 @@ $(document).ready(function (){
                         $.post('https://mrf_multichar/removeBlur');
                     }, 2000);
                 }, 2000);
-                background.volume = 0.3;
-                background.currentTime = 0
-                background.play();
             } else {
                 $('.container').fadeOut(250);
                 qbMultiCharacters.resetAll();
@@ -118,10 +114,6 @@ function setupCharacters(characters) {
             $('#char-'+char.cid).data('cid', char.cid)
         }, 100)
     })
-}
-
-function musicFadeOut() {
-    $(background).animate({ volume: 0 }, 3000);
 }
 
 $(document).on('click', '#close-log', function(e){

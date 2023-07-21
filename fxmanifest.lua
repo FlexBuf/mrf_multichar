@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'MARFY | QBCore Team'
-version '1.6.0'
+version '1.5.0'
 
 shared_script 'config.lua'
 
@@ -20,8 +20,7 @@ files {
     'html/style.css',
     'html/reset.css',
     'html/profanity.js',
-    'html/script.js',
-    'html/song.mp3',
+    'html/script.js'
 }
 
 dependencies {
