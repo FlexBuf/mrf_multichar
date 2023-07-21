@@ -107,6 +107,7 @@ function setupCharInfo(cData) {
         '<div class="character-info-box"><span id="info-label">Gender: </span><span class="char-info-js">'+gender+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Nationality: </span><span class="char-info-js">'+cData.charinfo.nationality+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Job: </span><span class="char-info-js">'+cData.job.label+'</span></div>' +
+	'<div class="character-info-box"><div id="info-label">Gang: </div><div class="char-info-js">' + cData.gang.label + ' - ' + cData.gang.grade.name + '</div></div>' +
 	'<div class="character-info-box"><span id="info-label">Grade </span><span class="char-info-js">' + cData.job.grade.name + '</span></div>' +
         '<div class="character-info-box"><span id="info-label">Cash: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.cash)+'</span></div>' +
         '<div class="character-info-box"><span id="info-label">Bank: </span><span class="char-info-js">&#36; '+dollar.format(cData.money.bank)+'</span></div>' +
