@@ -1,7 +1,7 @@
 ## mrf_multichar
-* Redesign qb-multicharacter.
-* Inspired from debux-multicharacter.
-* ![multichar](https://media.discordapp.net/attachments/1003822642379374703/1131542859380695040/multi.png)
+- Redesign qb-multicharacter.
+- Inspired from debux-multicharacter.
+- ![multichar](https://media.discordapp.net/attachments/1003822642379374703/1131542859380695040/multi.png)
 
 ## Dependencies
 - [qb-core](https://github.com/qbcore-framework/qb-core)
@@ -14,6 +14,7 @@
 - Download the script and put it in the `[qb]` directory.
 - Add the following code to your server.cfg/resouces.cfg
 - Ensure in server.cfg
+- If you don't want to play music in the background then comment out line 15 in index.html
 
 ```
 ensure oxmysql

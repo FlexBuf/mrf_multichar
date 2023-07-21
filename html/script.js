@@ -4,6 +4,7 @@ qbMultiCharacters = {}
 var Loaded = false;
 var NChar = null;
 var EnableDeleteButton = false;
+var background = document.getElementById("song");
 var dollar = Intl.NumberFormat('en-US');
 
 $(document).ready(function (){
@@ -56,6 +57,9 @@ $(document).ready(function (){
                         $.post('https://mrf_multichar/removeBlur');
                     }, 2000);
                 }, 2000);
+                background.volume = 0.2;
+                background.currentTime = 0
+                background.play();
             } else {
                 $('.container').fadeOut(250);
                 qbMultiCharacters.resetAll();
@@ -65,9 +69,11 @@ $(document).ready(function (){
         if (data.action == "setupCharacters") {
             setupCharacters(event.data.characters)
         }
-
         if (data.action == "setupCharInfo") {
             setupCharInfo(event.data.chardata)
+        }
+        if (data.action == "stopSong") {
+            musicFadeOut();
         }
     });
 
@@ -84,6 +90,10 @@ $('.disconnect-btn').click(function(e){
     $.post('https://mrf_multichar/closeUI');
     $.post('https://mrf_multichar/disconnectButton');
 });
+
+function musicFadeOut() {
+    $(background).animate({ volume: 0 }, 2500);
+}
 
 function setupCharInfo(cData) {
     if (cData == 'empty') {

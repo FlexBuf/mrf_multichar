@@ -80,6 +80,12 @@ end)
 
 -- Events
 
+AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+    SendNUIMessage({
+        action = "stopSong"
+    })
+end)
+
 RegisterNetEvent('mrf_multichar:client:closeNUIdefault', function() -- This event is only for no starting apartments
     DeleteEntity(charPed)
     SetNuiFocus(false, false)

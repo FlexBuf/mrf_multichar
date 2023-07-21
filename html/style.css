@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 .container {
     display: none;
 }
@@ -85,7 +86,7 @@
 }
 
 .character:hover {
-   /* background-color: #00000059; */
+
 }
 
 .character>span {
@@ -106,21 +107,11 @@
 }
 
 .char-selected {
-    /* background-color: rgb(0 0 0 / 29%) !important; */
     transition: 250ms;
 }
 
 .disabled {
-    /* background-color: rgba(0, 0, 0, 0.691); */
-}
 
-.logo {
-position: absolute;
-width: 380px;
-height: 228px;
-left: 1496px;
-top: 65px;
-/* background: url(""); */
 }
 
 #slot-name {
