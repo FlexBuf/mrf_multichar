@@ -79,10 +79,15 @@ end)
 RegisterNetEvent('mrf_multichar:server:loadUserData', function(cData)
     local src = source
     if QBCore.Player.Login(src, cData.citizenid) then
-        print('^2[qb-core]^7 '..GetPlayerName(src)..' (Citizen ID: '..cData.citizenid..') has succesfully loaded!')
+        print('^2[qb-core]^7 '..GetPlayerName(src)..' (Citizen ID: '..cData.citizenid..') has successfully loaded!')
         QBCore.Commands.Refresh(src)
         loadHouseData()
-        TriggerClientEvent('apartments:client:setupSpawnUI', src, cData)
+        if Config.LastLoc then
+            local coords = json.decode(cData.position)
+            TriggerClientEvent('mrf_multichar:client:lastloc', src, coords)
+        else
+            TriggerClientEvent('apartments:client:setupSpawnUI', src, cData)
+        end
         TriggerEvent("qb-log:server:CreateLog", "joinleave", "Loaded", "green", "**".. GetPlayerName(src) .. "** (<@"..(QBCore.Functions.GetIdentifier(src, 'discord'):gsub("discord:", "") or "unknown").."> |  ||"  ..(QBCore.Functions.GetIdentifier(src, 'ip') or 'undefined') ..  "|| | " ..(QBCore.Functions.GetIdentifier(src, 'license') or 'undefined') .." | " ..cData.citizenid.." | "..src..") loaded..")
 	end
 end)

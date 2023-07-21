@@ -10,6 +10,7 @@ Config.CamCoords = vector4(-1328.57, 143.77, -99.19, 271.41) -- Camera coordinat
 Config.Car = vector4(-1323.73, 143.87, -99.7, 23.22) -- Car spawn only use this in a locked interior
 Config.CarModel = "xa21" -- Car model
 Config.EnableDeleteButton = true -- Define if the player can delete the character or not
+Config.LastLoc = false -- Use this if you don't want to use qb-spawn last location
 
 Config.DefaultNumberOfCharacters = 5 -- Define maximum amount of default characters (maximum 5 characters defined by default)
 Config.PlayersNumberOfCharacters = { -- Define maximum amount of player characters by rockstar license (you can find this license in your server's database in the player table)

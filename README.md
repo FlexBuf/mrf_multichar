@@ -25,4 +25,7 @@ ensure mrf_multichar
 ```
 
 ## Original
-- [qb-multicharacter](https://github.com/qbcore-framework/qb-multicharacter)
+- [qb-multicharacter](https://github.com/qbcore-framework/qb-multicharacter) Base Script
+
+## Credit
+- [MrAlfredd] Thanks For the last location snippet

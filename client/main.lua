@@ -105,6 +105,27 @@ RegisterNetEvent('mrf_multichar:client:closeNUIdefault', function() -- This even
     TriggerEvent('qb-clothes:client:CreateFirstCharacter')
 end)
 
+RegisterNetEvent('mrf_multichar:client:lastloc', function(coords)
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    local insideMeta = PlayerData.metadata["inside"]
+    local ped = PlayerPedId()
+    DoScreenFadeOut(500)
+    if insideMeta.house then
+        TriggerEvent('qb-houses:client:LastLocationHouse', insideMeta.house)
+    elseif insideMeta.apartment.apartmentType and insideMeta.apartment.apartmentId then
+        TriggerEvent('qb-apartments:client:LastLocationHouse', insideMeta.apartment.apartmentType, insideMeta.apartment.apartmentId)
+    else
+        SetEntityCoords(ped, coords.x, coords.y, coords.z)
+        SetEntityHeading(ped, coords.w)
+        FreezeEntityPosition(ped, false)
+        SetEntityVisible(ped, true)
+    end
+    TriggerServerEvent('QBCore:Server:OnPlayerLoaded')
+    TriggerEvent('QBCore:Client:OnPlayerLoaded')
+    Wait(2000)
+    DoScreenFadeIn(250)
+end)
+
 RegisterNetEvent('mrf_multichar:client:closeNUI', function()
     DeleteEntity(charPed)
     SetNuiFocus(false, false)
@@ -143,9 +164,14 @@ RegisterNUICallback('selectCharacter', function(data)
     local cData = data.cData
     DoScreenFadeOut(10)
     TriggerServerEvent('mrf_multichar:server:loadUserData', cData)
-    openCharMenu(false)
     SetEntityAsMissionEntity(charPed, true, true)
     DeleteEntity(charPed)
+    if Config.LastLoc then
+        SetNuiFocus(false, false)
+        skyCam(false)
+    else
+        openCharMenu(false)
+    end
 end)
 
 RegisterNUICallback('cDataPed', function(nData, cb)
